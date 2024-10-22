@@ -1,29 +1,28 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
- * main - Entry point of the program
+ * main - entry point
  *
- * This program generates a random number, checks if it's positive, 
- * zero, or negative, and prints the corresponding message.
- *
- * Return: Always 0 (Success)
+ * Return: 0 (if success)
  */
 int main(void)
 {
 	int n;
 
-	srand(time(0));  /* Initialiser le générateur de nombres aléatoires */
-	n = rand() - RAND_MAX / 2;  /* Assigner une valeur aléatoire à n */
-
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero\n", n);
-	else
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n < 0)
+	{
 		printf("%d is negative\n", n);
-
+	}
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else
+	{
+		printf("%d is positive\n", n);
+	}
 	return (0);
 }
-
