@@ -1,24 +1,34 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
  * main - Entry point of the program
+ *
+ * This function prints the lowercase alphabet followed by the uppercase
+ * alphabet, each followed by a new line.
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char letter;
-	// Print lowercase letters
-	for (letter = 'a'; letter <= 'z'; letter++)
+	int i;
+
+	/* Print lowercase alphabet */
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		putchar(letter);
+		putchar(i);
 	}
-	// Print uppercase letters
-	for (letter = 'A'; letter <= 'Z'; letter++)
+
+	/* Print uppercase alphabet */
+	for (i = 'A'; i <= 'Z'; i++)
 	{
-		putchar(letter);
+		putchar(i);
 	}
-	putchar('\n'); // Print a new line
+
+	/* Print newline */
+	putchar('\n');
+
 	return (0);
 }
