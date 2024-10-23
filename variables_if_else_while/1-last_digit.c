@@ -1,37 +1,29 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
- * main - Entry point of the program
- *
- * Description: This program generates a random number and
- * prints the last digit with specific conditions.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+	int n, d;
 
-	srand(time(0)); /* Seed the random number generator */
-	n = rand() - RAND_MAX / 2; /* Generate a random number */
-
-	int last_digit = n % 10; /* Get the last digit of n */
-
-	/* Print the last digit with the specified conditions */
-	printf("Last digit of %d is %d", n, last_digit);
-	if (last_digit > 5)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	d = n % 10;
+	if (d > 5)
 	{
-		printf(" and is greater than 5\n");
+		printf("Last digit of %d is %d and is greater than 5\n", n, d);
 	}
-	else if (last_digit == 0)
+	else if (d < 6 && d != 0)
 	{
-		printf(" and is 0\n");
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, d);
 	}
 	else
 	{
-		printf(" and is less than 6 and not 0\n");
+		printf("Last digit of %d is %d and is 0\n", n, d);
 	}
-	return (0); /* Return success */
+	return (0);
 }
