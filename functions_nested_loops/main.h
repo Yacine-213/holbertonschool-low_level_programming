@@ -6,6 +6,7 @@ void print_alphabet_x10(void);
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
-int print_sign(int n);  /* Déclaration de la fonction print_sign */
+int print_sign(int n);
+int _abs(int);  /* Déclaration de la fonction _abs */
 
 #endif /* MAIN_H */
