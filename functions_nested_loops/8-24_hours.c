@@ -14,8 +14,8 @@ void jack_bauer(void)
 			_putchar((hour / 10) + '0');  /* Affiche le chiffre des dizaines d'heures */
 			_putchar((hour % 10) + '0');  /* Affiche le chiffre des unités d'heures */
 			_putchar(':');
-			_putchar((minute / 10) + '0'); /* Affiche le chiffre des dizaines de minutes */
-			_putchar((minute % 10) + '0'); /* Affiche le chiffre des unités de minutes */
+			_putchar((minute / 10) + '0'); /* Affiche le chiffre dizaines de minutes */
+			_putchar((minute % 10) + '0'); /* Affiche le chiffre unités de minutes */
 			_putchar('\n');
 		}
 	}
