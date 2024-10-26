@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Prints "_putchar" followed by a new line.
@@ -9,16 +7,15 @@
  */
 int main(void)
 {
-	/* Print each character of "_putchar" using putchar function */
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n'); /* Print a new line */
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
-	return (0); /* Return 0 to indicate successful execution */
+	return (0);
 }
