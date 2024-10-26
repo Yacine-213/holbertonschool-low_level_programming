@@ -1,12 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void print_alphabet(void);
-void print_alphabet_x10(void);
+/* Prototype for the _putchar function */
 int _putchar(char c);
-int _islower(int c);
-int _isalpha(int c);
-int print_sign(int n);
-int _abs(int);  /* Déclaration de la fonction _abs */
+
+/* Prototype for the print_last_digit function */
+int print_last_digit(int n);
+
+/* You can add more function prototypes here if needed */
 
 #endif /* MAIN_H */
