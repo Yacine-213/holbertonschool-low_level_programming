@@ -1,12 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Prototype for the _putchar function */
+void jack_bauer(void);
 int _putchar(char c);
-
-/* Prototype for the print_last_digit function */
-int print_last_digit(int n);
-
-/* You can add more function prototypes here if needed */
 
 #endif /* MAIN_H */
