@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void fizz_buzz(void);  // Prototype de la fonction fizz_buzz
+int _putchar(char c);
+void print_triangle(int size);
 
 #endif /* MAIN_H */
