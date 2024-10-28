@@ -1,12 +1,9 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- * main - Point d'entrée du programme
- *
- * Return: Toujours 0 (succès)
- */
+void fizz_buzz(void);
+
 int main(void)
 {
-	fizz_buzz();  // Appel de la fonction fizz_buzz
+	fizz_buzz();
 	return (0);
 }
