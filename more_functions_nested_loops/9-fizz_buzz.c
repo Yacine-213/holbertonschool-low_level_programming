@@ -1,8 +1,13 @@
 #include <stdio.h>
 
-void fizz_buzz(void)
+/**
+ * main - prints numbers from 1 to 100 with FizzBuzz logic
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	int i;
+	int i;  /* Déclarez la variable i ici */
 
 	for (i = 1; i <= 100; i++)
 	{
@@ -19,4 +24,6 @@ void fizz_buzz(void)
 			printf(" ");
 	}
 	printf("\n");
+
+	return (0);
 }
