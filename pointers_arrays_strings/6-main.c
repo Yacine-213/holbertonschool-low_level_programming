@@ -9,7 +9,7 @@ int main(void)
 {
 	char *str;
 
-	str = "0123456789";
-	puts2(str);
+	str = "0123456789";  /* Test string */
+	puts2(str);  /* Call the function to print every other character */
 	return (0);
 }
