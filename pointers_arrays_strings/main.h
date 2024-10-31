@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _atoi(char *s);
+void puts2(char *str);
 int _putchar(char c);
 
 #endif /* MAIN_H */

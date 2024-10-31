@@ -1,15 +1,13 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
-	char *str;
-
-	str = "0123456789";  /* Test string */
-	puts2(str);  /* Call the function to print every other character */
-	return (0);
+	char *str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+	puts2(str);  /* Call puts2 with the string */
+	return 0;    /* Return 0 to indicate success */
 }
