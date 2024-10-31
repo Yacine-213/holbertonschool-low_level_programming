@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - check the code
  *
- * Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {
-	char *str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-	puts2(str);  /* Call puts2 with the string */
-	return 0;    /* Return 0 to indicate success */
+	char *str;
+
+	str = "0123456789";
+	puts2(str); /* Call the puts2 function */
+	return (0);
 }
