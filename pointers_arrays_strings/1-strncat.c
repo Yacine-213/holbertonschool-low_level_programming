@@ -1,31 +1,30 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strncat - Concatène deux chaînes de caractères avec un nom� d'octets.
- * @dest: La chaîne de destination.
- * @src: La chaîne source à ajouter à `dest`.
- * @n: Le nombre d'octets à utiliser de `src`.
+ * _strncat - a function that concatenates two strings
+ * @dest: a pointer pointing to the destination string
+ * @src: a pointer pointing to the source string
+ * @n: the maximum number of characters to append from src to dest
  *
- * Return: Un pointeur vers la chaîne résultante `dest`.
+ * Return: a pointer to the resulting destination string
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int dest_len = 0, i;
+	int i, j;
 
-	/* Trouver la longueur de la chaîne de destination */
-	while (dest[dest_len] != '\0')
+	// Find the length of dest
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+
+	// Append up to n characters from src to dest
+	for (j = 0; j < n && src[j] != '\0'; j++, i++)
 	{
-		dest_len++;
+		dest[i] = src[j];
 	}
 
-	/* Ajouter jusqu'à n octets de `src` à `dest` */
-	for (i = 0; i < n && src[i] != '\0'; i++)
-	{
-		dest[dest_len + i] = src[i];
-	}
+	// Ensure the result is null-terminated
+	dest[i] = '\0';
 
-	/* Ajouter le caractère nul à la fin de `dest` */
-	dest[dest_len + i] = '\0';
-
-	return (dest);
+	return dest;
 }
