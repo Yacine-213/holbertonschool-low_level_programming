@@ -2,17 +2,22 @@
 #include <stdio.h>
 
 /**
- * main - Teste la fonction _strlen
+ * main - check the code
  *
- * Return: Toujours 0.
+ * Return: Always 0.
  */
 int main(void)
 {
-	char *str;
-	int len;
+	char dest[20];
+	char *src = "Hello, World!";
+	int n = 5;
 
-	str = "My first strlen!";
-	len = _strlen(str);
-	printf("%d\n", len);
+	_strncpy(dest, src, n);
+	printf("Copied string (first %d chars): %s\n", n, dest);
+
+	n = 15;
+	_strncpy(dest, src, n);
+	printf("Copied string (first %d chars): %s\n", n, dest);
+
 	return (0);
 }
