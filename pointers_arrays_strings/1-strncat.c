@@ -13,18 +13,18 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
-	// Find the length of dest
+	/* Find the length of dest */
 	for (i = 0; dest[i] != '\0'; i++)
 		;
 
-	// Append up to n characters from src to dest
+	/* Append up to n characters from src to dest */
 	for (j = 0; j < n && src[j] != '\0'; j++, i++)
 	{
 		dest[i] = src[j];
 	}
 
-	// Ensure the result is null-terminated
+	/* Ensure the result is null-terminated */
 	dest[i] = '\0';
 
-	return dest;
+	return (dest);
 }
