@@ -8,16 +8,14 @@
  */
 int main(void)
 {
-	char dest[20];
-	char *src = "Hello, World!";
-	int n = 5;
+	char *s = "hello";
+	char *f;
 
-	_strncpy(dest, src, n);
-	printf("Copied string (first %d chars): %s\n", n, dest);
+	f = _strchr(s, 'l');
 
-	n = 15;
-	_strncpy(dest, src, n);
-	printf("Copied string (first %d chars): %s\n", n, dest);
-
+	if (f != NULL)
+	{
+		printf("%s\n", f);
+	}
 	return (0);
 }

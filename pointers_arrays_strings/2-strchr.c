@@ -1,8 +1,8 @@
 #include "main.h"
-#include <stddef.h>  // Inclure pour NULL
+#include <stddef.h>  /* Inclure pour NULL */
 
 /**
- * _strchr - Locates a character in a string
+ * _strchr - Locate a character in a string
  * @s: Pointer to the string to search
  * @c: Character to locate in the string
  *
@@ -17,15 +17,16 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == c)  /* Check if the current character matches `c` */
 		{
-			return s;  /* Return a pointer to the current character */
+			return (s);  /* Return a pointer to the current character */
 		}
 		s++;  /* Move to the next character in the string */
 	}
 
-	if (*s == c)  /* Check for the null terminator */
+	/* Check for the null terminator */
+	if (*s == c)  /* If we reach the null terminator and it matches `c` */
 	{
-		return s;  /* Return a pointer to the null terminator if `c` is '\0' */
+		return (s);  /* Return a pointer to the null terminator if `c` is '\0' */
 	}
 
-	return NULL;  /* Return NULL if `c` was not found in the string */
+	return (NULL);  /* Return NULL if `c` was not found in the string */
 }
