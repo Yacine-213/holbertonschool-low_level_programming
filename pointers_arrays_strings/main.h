@@ -1,14 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Function prototypes */
-char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
-int _strcmp(char *s1, char *s2);
-void reverse_array(int *a, int n);
-char *string_toupper(char *s);
-char *cap_string(char *s);
-char *leet(char *s);
+/* Prototype de la fonction _memset */
+char *_memset(char *s, char b, unsigned int n);
+
+/* Prototype de la fonction _memcpy */
+char *_memcpy(char *dest, char *src, unsigned int n);
+
+/* Prototype de la fonction simple_print_buffer */
+void simple_print_buffer(char *buffer, unsigned int size);
 
 #endif /* MAIN_H */
 
