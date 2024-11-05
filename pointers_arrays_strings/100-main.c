@@ -8,15 +8,11 @@
  */
 int main(void)
 {
-	int nb;
+	char *s0 = "Bob Dylan";
+	char *s1 = "Robert Allen";
 
-	nb = _atoi("98");
-	printf("%d\n", nb);
-	nb = _atoi("-402");
-	printf("%d\n", nb);
-	nb = _atoi("          ------++++++-----+++++--98");
-	printf("%d\n", nb);
-	nb = _atoi("214748364");
-	printf("%d\n", nb);
-	nb = _atoi("0");
-	printf("%d
+	printf("%s, %s\n", s0, s1);
+	set_string(&s1, s0);
+	printf("%s, %s\n", s0, s1);
+	return (0);
+}
