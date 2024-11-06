@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"  /* Inclusion du fichier main.h */
 
 /**
  * main - Affiche le nom du programme suivi d'un saut de ligne.
@@ -11,5 +12,5 @@ int main(int argc, char *argv[])
 {
 	(void)argc;  /* Paramètre non utilisé, on peut l'ignorer. */
 	printf("%s\n", argv[0]);  /* Affiche le nom du programme. */
-	return (0);
+	return 0;
 }
