@@ -1,26 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "main.h"
 
 /**
- * is_number - Checks if a string consists only of digits
- * @s: The string to check
- *
- * Return: 1 if the string is a number, 0 otherwise
+ * main - function to add variables
+ * @argc: number of arguments
+ * @argv: arguments being passed
+ * Return: Always 0 or 1
  */
-int is_number(char *s)
+int main(int argc, char **argv)
 {
-	int i = 0;
+	int a, b, addition;
 
-	if (s[i] == '\0') /* Handle the case of an empty string */
-		return (0);
-
-	while (s[i])
+	for (a = 1; a < argc; a++)
 	{
-		if (!isdigit(s[i])) /* Checks if the character is not a digit */
-			return (0);
-		i++;
+		for (b = 0; argv[a][b] != '\0'; b++)
+		{
+			if (!isdigit(argv[a][b]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		addition = addition + atoi(argv[a]);
 	}
-	return (1);
+	printf("%i\n", addition);
+	return (0);
 }
