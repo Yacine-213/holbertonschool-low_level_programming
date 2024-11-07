@@ -1,16 +1,15 @@
 #include <stdio.h>
-#include "main.h"  /* Inclusion du fichier main.h */
+#include "main.h"
 
 /**
- * main - Affiche le nom du programme suivi d'un saut de ligne.
+ * main - Affiche le nom du programme
  * @argc: Nombre d'arguments
- * @argv: Tableau des arguments (chaînes de caractères)
+ * @argv: Tableau d'arguments
  *
- * Retour : Toujours 0 (Succès)
+ * Return: Toujours 0 (Succès)
  */
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	(void)argc;  /* Paramètre non utilisé, on peut l'ignorer. */
-	printf("%s\n", argv[0]);  /* Affiche le nom du programme. */
-	return 0;
+	printf("%s\n", argv[0]);
+	return (0);
 }
