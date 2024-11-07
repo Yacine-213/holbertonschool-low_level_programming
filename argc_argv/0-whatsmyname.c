@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * main - Affiche le nom du programme
- * @argc: Nombre d'arguments
- * @argv: Tableau d'arguments
+ * main - display the name program
+ * @argc: number of arrays
+ * @argv: arguments arrays
  *
  * Return: Toujours 0 (Succès)
  */
