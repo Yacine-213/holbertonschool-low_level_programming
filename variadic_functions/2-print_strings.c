@@ -1,31 +1,36 @@
 #include "variadic_functions.h"
-
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * print_strings - prints strings, followed by a new line.
- * @separator: string to be printed between strings
- * @n: number of strings passed to the function
+ * print_strings - prints string arguments with a separator
+ *
+ * @separator: - thing to print between strings
+ * @n: - number of arguments
+ *
+ * Return: void
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
+	char *sep, *ptr;
 	unsigned int i;
-	char *str;
+	va_list list;
 
-	va_start(args, n);
+	if (separator == NULL || *separator == 0)
+		sep = "";
+	else
+		sep = (char *) separator;
+	va_start(list, n);
 
-	for (i = 0; i < n; i++)
+	if (n > 0)
+		printf("%s", va_arg(list, char *));
+	for (i = 1; i < n; i++)
 	{
-		str = va_arg(args, char*);  /* Get the current string */
-
-		if (str == NULL)
-			printf("(nil)");  /* If the string is NULL, print (nil) */
-		else
-			printf("%s", str);  /* Otherwise, print the string */
-
-		if (separator != NULL && i < n - 1)  /* Print separator if it's not NULL */
-			printf("%s", separator);
+		ptr = va_arg(list, char*);
+		if (ptr == NULL)
+			ptr = "(nil)";
+		printf("%s%s", sep, ptr);
 	}
-
-	printf("\n");  /* Print a new line at the end */
-	va_end(args);
+	printf("\n");
+	va_end(list);
 }
