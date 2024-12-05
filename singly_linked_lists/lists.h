@@ -22,6 +22,6 @@ typedef struct list_s
 
 /* Prototypes des fonctions */
 list_t *add_node(list_t **head, const char *str);
-void print_list(const list_t *h); /* Prototype pour la fonction d'impression */
+size_t print_list(const list_t *h); /* Change to size_t */
 
 #endif /* LISTS_H */
