@@ -4,37 +4,15 @@
 #include "lists.h"
 
 /**
- * print_list - Affiche tous les éléments de la liste.
- * @h: Pointeur vers la tête de la liste.
+ * main - Check the code
  *
- * Return: Le nombre de nœuds dans la liste.
- */
-size_t print_list(const list_t *h)
-{
-	size_t count = 0; /* Compteur de nœuds */
-
-	while (h) /* Parcours de la liste */
-	{
-		if (h->str) /* Vérifie si la chaîne n'est pas NULL */
-			printf("[%u] %s\n", h->len, h->str);
-		else
-			printf("[0] (nil)\n"); /* Affiche (nil) si la chaîne est NULL */
-		h = h->next; /* Passe au nœud suivant */
-		count++; /* Incrémente le compteur */
-	}
-	return (count); /* Retourne le nombre de nœuds */
-}
-
-/**
- * main - Vérifie le code.
- *
- * Return: Toujours 0.
+ * Return: Always 0.
  */
 int main(void)
 {
-	list_t *head; /* Pointeur vers la tête de la liste */
+	list_t *head;
 
-	head = NULL; /* Initialise la tête de la liste à NULL */
+	head = NULL; /* Initialize the head of the list to NULL */
 	add_node(&head, "Alexandro");
 	add_node(&head, "Asaia");
 	add_node(&head, "Augustin");
@@ -64,8 +42,6 @@ int main(void)
 	add_node(&head, "William");
 	add_node(&head, "Zee");
 
-	/* Affiche la liste */
-	print_list(head);
-
-	return (0); /* Retourne 0 pour indiquer que le programme s'est terminé avec succès */
+	print_list(head); /* Print the list */
+	return (0);
 }

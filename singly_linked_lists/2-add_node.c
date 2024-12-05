@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
@@ -10,25 +12,25 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node; /* Pointer to the new node */
-	char *dup_str; /* Pointer to the duplicated string */
-
-	/* Duplicate the string */
-	dup_str = strdup(str);
-	if (dup_str == NULL) /* Check for memory allocation failure */
-		return (NULL);
 
 	/* Allocate memory for the new node */
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL) /* Check for memory allocation failure */
+		return (NULL);
+
+	/* Duplicate the string and assign it to the new node */
+	new_node->str = strdup(str);
+	if (new_node->str == NULL) /* Check if strdup failed */
 	{
-		free(dup_str); /* Free the duplicated string if node allocation fails */
+		free(new_node); /* Free the allocated node */
 		return (NULL);
 	}
 
-	/* Initialize the new node */
-	new_node->str = dup_str; /* Set the string */
-	new_node->len = strlen(dup_str); /* Set the length of the string */
-	new_node->next = *head; /* Point to the current head of the list */
+	/* Set the length of the string */
+	new_node->len = strlen(str);
+
+	/* Point the new node to the current head */
+	new_node->next = *head;
 
 	/* Update the head to point to the new node */
 	*head = new_node;
