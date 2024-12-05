@@ -1,27 +1,27 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-#include <stddef.h> /* For size_t */
-#include <stdlib.h> /* For malloc and free */
-#include <string.h> /* For strdup */
+#include <stddef.h> /* Pour size_t */
+#include <stdlib.h> /* Pour malloc et free */
+#include <string.h> /* Pour strdup et strlen */
 
 /**
- * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
+ * struct list_s - liste simplement chaînée
+ * @str: chaîne de caractères - (chaîne allouée avec malloc)
+ * @len: longueur de la chaîne
+ * @next: pointeur vers le nœud suivant
  *
- * Description: singly linked list node structure
+ * Description: structure de nœud de liste simplement chaînée
  */
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+    char *str; /* Pointeur vers la chaîne de caractères */
+    unsigned int len; /* Longueur de la chaîne */
+    struct list_s *next; /* Pointeur vers le nœud suivant */
 } list_t;
 
-/* Function prototypes */
-size_t list_len(const list_t *h);
-size_t print_list(const list_t *h); /* Assuming you have this function */
+/* Prototypes des fonctions */
+list_t *add_node(list_t **head, const char *str);
+void print_list(const list_t *h); /* Prototype pour la fonction d'impression */
 
 #endif /* LISTS_H */
