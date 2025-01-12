@@ -1,11 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>  /* For printf */
-#include <unistd.h> /* For write function used in _putchar */
+#include <stdio.h>  /* For printf (optional, if you need printing functionality) */
 
-void print_binary(unsigned long int n);
-void _putchar(char c);
+/* Function prototypes */
+int get_bit(unsigned long int n, unsigned int index);
 
 #endif /* MAIN_H */
 
