@@ -1,49 +1,26 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-/**
- * struct dlistint_s - Node of a doubly linked list
- * @n: Integer data of the node
- * @prev: Pointer to the previous node in the list
- * @next: Pointer to the next node in the list
- *
- * Description: A structure representing a node in a doubly linked list
- */
+/* Structure for doubly linked list node */
 typedef struct dlistint_s
 {
-    int n;                     /* Integer data */
-    struct dlistint_s *prev;    /* Pointer to previous node */
-    struct dlistint_s *next;    /* Pointer to next node */
+    int n; /* The data in the node */
+    struct dlistint_s *prev; /* Pointer to the previous node */
+    struct dlistint_s *next; /* Pointer to the next node */
 } dlistint_t;
 
 /* Function prototypes */
-
-/* 0-print_dlistint.c */
-size_t print_dlistint(const dlistint_t *h);
-
-/* 1-dlistint_len.c */
-size_t dlistint_len(const dlistint_t *h);
-
-/* 2-add_dnodeint.c */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
-
-/* 3-add_dnodeint_end.c */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
-
-/* 4-free_dlistint.c */
 void free_dlistint(dlistint_t *head);
-
-/* 5-get_dnodeint.c */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
-
-/* 6-sum_dlistint.c */
 int sum_dlistint(dlistint_t *head);
-
-/* 7-insert_dnodeint_at_index.c */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+void print_dlistint(const dlistint_t *h);
 
 #endif /* LISTS_H */
 
