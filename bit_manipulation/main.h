@@ -4,7 +4,7 @@
 #include <stdio.h>  /* For printf (optional, if you need printing functionality) */
 
 /* Function prototypes */
-int set_bit(unsigned long int *n, unsigned int index);
+int clear_bit(unsigned long int *n, unsigned int index);
 
 #endif /* MAIN_H */
 
