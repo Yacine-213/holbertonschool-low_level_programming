@@ -19,6 +19,7 @@ typedef struct dlistint_s
 } dlistint_t;
 
 /* Prototypes des fonctions */
+void free_dlistint(dlistint_t *head);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 size_t print_dlistint(const dlistint_t *h);
 
