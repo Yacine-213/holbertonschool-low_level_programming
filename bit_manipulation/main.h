@@ -1,10 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>  /* For printf (optional, if you need printing functionality) */
+#include <stdio.h> /* Optional: Include for printf if needed */
 
 /* Function prototypes */
-int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 #endif /* MAIN_H */
 
